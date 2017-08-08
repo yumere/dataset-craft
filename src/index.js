@@ -29,10 +29,9 @@ const _processSingleFile = (files, i, ws, cb) => {
 
   rl.on('line', function (line) {
     if (prevLines.length > 10) {
-      res.shift();
+      prevLines.shift();
     }
 
-    console.log(line)
     line = line.trim();
     lineSplit = split(line);
     for (var i = 0; i < prevLinesSplit.length; i++) {
