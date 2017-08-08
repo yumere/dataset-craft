@@ -13,7 +13,6 @@ const writeWithPrevLines = require('./utils/writeWithPrevLines').default;
 const _processSingleFile = (files, i, ws, cb) => {
   var a = files[i].split('/');
   if (a[a.length - 1] == '.DS_Store') {
-    console.log(2)
     return _processNextFile(files, i + 1, ws);
   }
   let res = [];
@@ -28,13 +27,16 @@ const _processSingleFile = (files, i, ws, cb) => {
     });
 
   rl.on('line', function (line) {
+    console.log(line)
     if (prevLines.length > 10) {
       prevLines.shift();
+      prevLinesSplit.shift();
     }
 
     line = line.trim();
     lineSplit = split(line);
     for (var i = 0; i < prevLinesSplit.length; i++) {
+      console.log(i)
       let dist0 = getDistancesBetweenSameWords(prevLinesSplit[i]);
       let dist1 = getDistancesBetweenSameWords(lineSplit);
       if (hasCommonElem(dist0, dist1)) {
