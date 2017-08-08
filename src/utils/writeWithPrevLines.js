@@ -1,9 +1,9 @@
 const SEP = '%NWL%';
 
-const writeWithPrevLines = (rl, prevLines, line, i) => {
+const writeWithPrevLines = (ws, prevLines, line, i) => {
   let str = prevLines.join(SEP);
   str += `${SEP}${line}${SEP}${i}\n`;
-  rl.output.write(str);
+  ws.write(str);
 };
 
 exports.default = writeWithPrevLines;

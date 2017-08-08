@@ -38,7 +38,7 @@ const _processSingleFile = (files, i, ws, cb) => {
       let dist0 = getDistancesBetweenSameWords(prevLinesSplit[i]);
       let dist1 = getDistancesBetweenSameWords(lineSplit);
       if (hasCommonElem(dist0, dist1)) {
-        writeWithPrevLines(rl, prevLines, line, i);
+        writeWithPrevLines(rl.output, prevLines, line, i);
       }
     }
     prevLinesSplit.push(lineSplit);
