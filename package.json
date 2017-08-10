@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "acorn": "^5.1.1",
-    "nodemon": "^1.11.0"
+    "fs": "0.0.1-security",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
   }
 }
