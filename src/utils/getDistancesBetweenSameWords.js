@@ -8,12 +8,12 @@ const getDistancesBetweenSameWords = (arr) => {
     }
   }
   return res;
-}
+};
 
 const _not = (word) => {
   return !word.match(/[^0-9a-zA-Z]/g)
   // var exclusions = [' ', '', '\"', '\'', '\t', '(', ')', '\s', ',', '.', ';'];
   // return !exclusions.includes(word);
-}
+};
 
 exports.default = getDistancesBetweenSameWords;

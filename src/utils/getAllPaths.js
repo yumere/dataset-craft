@@ -1,11 +1,12 @@
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 
-var walk = function(dir, done) {
-  var results = [];
+const walk = function(dir, done) {
+  let results = [];
   fs.readdir(dir, function(err, list) {
     if (err) return done(err);
-    var pending = list.length;
+
+    let pending = list.length;
     if (!pending) {
       return done(null, results);
     }

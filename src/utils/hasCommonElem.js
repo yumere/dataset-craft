@@ -3,6 +3,6 @@ const hasCommonElem = (arr1, arr2) => {
     if (arr1.includes(arr2[i])) return true;
   }
   return false;
-}
+};
 
 exports.default = hasCommonElem;

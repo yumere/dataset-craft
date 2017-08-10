@@ -1,7 +1,8 @@
 const split = (text) => {
-  var res = []
-  var word = ''
-  for (var i = 0; i < text.length; i++) {
+  let res = [],
+      word = '';
+
+  for (let i = 0; i < text.length; i++) {
     if (text[i].match(/[^0-9a-zA-Z]/g)) {
       if (word.length) {
         res.push(word);
